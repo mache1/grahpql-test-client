@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import SearchForm from './components/SearchForm/SearchForm';
+import HotelCards from './components/HotelCards/HotelCards';
+import { useState } from 'react';
+import SearchResults from './components/SearchResults/SearchResults';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = (props) => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
+    const submitForm = () => {
+        setFormSubmitted(true);
+    };
+
+    return (
+        <div className="app">
+            <header>
+
+            </header>
+            <SearchForm submitForm={submitForm} />
+            <HotelCards formSubmitted={formSubmitted} />
+            {/* <SearchResults /> */}
+        </div>
+    );
 }
 
 export default App;

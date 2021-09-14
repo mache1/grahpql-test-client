@@ -1,0 +1,43 @@
+.hotel-card {
+    display: inline-block;
+    position: relative;
+    height: 500px;
+    width: 40%; // 33%
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin: 50px 25px;
+    overflow: hidden;
+
+    .hotel__name {
+        background-color: #fff;
+        padding: 5px 0;
+        font-size: 2.25rem;
+    }
+
+    .hotel__location,
+    .hotel__rating {
+        position: absolute;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding: 5px 0;
+    }
+
+    .hotel__location {
+        bottom: 0;
+        left: 0;
+        width: 75%;
+        background-color: #fff;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .hotel__rating {
+        bottom: 0;
+        left: 75%;
+        width: 25%;
+        background-color: #fff;
+
+        border-left: 1px solid #ccc;
+    }
+}
